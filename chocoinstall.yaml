@@ -1,0 +1,7 @@
+---
+- hosts: win
+  tasks:
+  - name: install notepadplusplsu
+    win_chocolatey:
+      name: notepadplusplus.install
+   

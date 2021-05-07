@@ -1,0 +1,9 @@
+---
+- hosts: linux
+  vars:
+    games: [ cricket, football, baseball, basketball, running, longjump ]
+  tasks:
+  - name: print list variables
+    debug:
+      msg: "{{ games [4]}}"
+

@@ -1,0 +1,13 @@
+---
+- hosts:
+  
+  vars:
+    list1: [ 1, 2, 3 ]
+    list2: [ a, b, c ]
+
+  tasks:
+  - name: print variable
+    debug: msg="items are {{item[0]}} and {{item[1]}}"
+    with_nested:
+      - list1
+      - list2

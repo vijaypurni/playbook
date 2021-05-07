@@ -1,0 +1,8 @@
+---
+- hosts: linux
+  tasks:
+  - name: print output
+    command: echo "im in training"
+    register: output
+  - debug: msg="standard output={{output.stdout}}"
+  - debug: msg="standard error={{output.stderr}}"

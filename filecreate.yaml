@@ -1,0 +1,11 @@
+---
+- hosts: linux
+  tasks:
+  - name: create file
+    file:
+     path: /home/ansible/test-directory
+     state: directory
+  - name: create file
+    file:
+     path: /home/ansible/test
+     state: touch
